@@ -23,6 +23,6 @@ namespace SPI.Models
             }
         }
 
-        public ICollection<SparePart>? SpareParts { get; set;}
+        public ICollection<SparePart>? SpareParts { get; set;} = new List<SparePart>();
     }
 }

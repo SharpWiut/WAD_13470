@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using SPI.Data;
+using SPI.Models;
+using SPI.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +17,9 @@ builder.Services.AddDbContext<SparePartsInventoryDBContext>(
     o => o.UseSqlServer(
         builder.Configuration.GetConnectionString("SqlServerConnection")));
 
+builder.Services.AddScoped<IRepository<SparePart>, SparePartsRepository>();
+builder.Services.AddScoped<IRepository<Category>, CategoryRepository>();
+builder.Services.AddScoped<IRepository<Supplier>, SupplierRepository>();
 
 
 var app = builder.Build();
