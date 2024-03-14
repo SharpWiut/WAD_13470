@@ -13,6 +13,11 @@ namespace SPI.Repositories
             _dbContext = dbContext;
         }
 
+        public async Task<int> CountAsync()
+        {
+            return await _dbContext.Set<Category>().CountAsync();
+        }
+
         // Add or create new entity
         public async Task AddAsync(Category categories)
         {
@@ -42,6 +47,10 @@ namespace SPI.Repositories
         {
             _dbContext.Entry(categories).State = EntityState.Modified;
             await _dbContext.SaveChangesAsync();
+        }
+
+        public async Task UpdateQuantityAsync(int id, int quantityDelta)
+        {
         }
     }
 }

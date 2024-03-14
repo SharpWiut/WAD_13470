@@ -1,4 +1,6 @@
-﻿namespace SPI.Repositories
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace SPI.Repositories
 {
     public interface IRepository <T>
     {
@@ -7,5 +9,8 @@
         Task AddAsync(T entity);
         Task UpdateAsync(T entity);
         Task DeleteAsync(int id);
+        Task<int> CountAsync();
+        Task UpdateQuantityAsync(int id, int quantityDelta);
+
     }
 }

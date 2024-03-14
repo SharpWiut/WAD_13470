@@ -22,7 +22,5 @@ namespace SPI.Models
                 _name = value;
             }
         }
-
-        public ICollection<SparePart>? SpareParts { get; set;} = new List<SparePart>();
     }
 }

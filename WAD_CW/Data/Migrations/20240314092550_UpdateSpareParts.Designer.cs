@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SPI.Data;
 
@@ -11,9 +12,10 @@ using SPI.Data;
 namespace SPI.Data.Migrations
 {
     [DbContext(typeof(SparePartsInventoryDBContext))]
-    partial class SparePartsInventoryDBContextModelSnapshot : ModelSnapshot
+    [Migration("20240314092550_UpdateSpareParts")]
+    partial class UpdateSpareParts
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -62,6 +64,7 @@ namespace SPI.Data.Migrations
                         .HasColumnType("int");
 
                     b.Property<int?>("SupplierId")
+                        .IsRequired()
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -115,18 +118,30 @@ namespace SPI.Data.Migrations
             modelBuilder.Entity("SPI.Models.SparePart", b =>
                 {
                     b.HasOne("SPI.Models.Category", "Category")
-                        .WithMany()
+                        .WithMany("SpareParts")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("SPI.Models.Supplier", "Supplier")
-                        .WithMany()
-                        .HasForeignKey("SupplierId");
+                        .WithMany("SpareParts")
+                        .HasForeignKey("SupplierId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Category");
 
                     b.Navigation("Supplier");
+                });
+
+            modelBuilder.Entity("SPI.Models.Category", b =>
+                {
+                    b.Navigation("SpareParts");
+                });
+
+            modelBuilder.Entity("SPI.Models.Supplier", b =>
+                {
+                    b.Navigation("SpareParts");
                 });
 #pragma warning restore 612, 618
         }

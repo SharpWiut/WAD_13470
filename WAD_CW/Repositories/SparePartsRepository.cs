@@ -13,6 +13,11 @@ namespace SPI.Repositories
             _dbContext = dbContext;
         }
 
+        public async Task<int> CountAsync()
+        {
+            return await _dbContext.Set<SparePart>().CountAsync();
+        }
+
         public async Task<IEnumerable<SparePart>> GetAllAsync() => await _dbContext.SpareParts.ToArrayAsync();
         
         public async Task<SparePart> GetByIDAsync(int id)
@@ -44,6 +49,23 @@ namespace SPI.Repositories
                 await _dbContext.SaveChangesAsync();
             }
         }
+
+
+        public async Task UpdateQuantityAsync(int id, int quantityDelta)
+        {
+            var sparePart = await _dbContext.SpareParts.FindAsync(id);
+            if (sparePart != null)
+            {
+                sparePart.Quantity += quantityDelta;
+                await _dbContext.SaveChangesAsync();
+            }
+            else
+            {
+                throw new Exception($"Spare part with ID {id} not found.");
+            }
+        }
+
+
 
     }
 }

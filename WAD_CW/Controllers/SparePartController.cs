@@ -25,8 +25,8 @@ namespace SPI.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetByID(int id)
         {
-            var resultedToDo = await _sparePartsRepository.GetByIDAsync(id);
-            return resultedToDo == null ? NotFound() : Ok(resultedToDo);
+            var result = await _sparePartsRepository.GetByIDAsync(id);
+            return result == null ? NotFound() : Ok(result);
         }
 
         [HttpPost]
@@ -57,6 +57,24 @@ namespace SPI.Controllers
             return NoContent();
 
 
+        }
+
+
+        [HttpGet]
+        public async Task<int> Count() => await _sparePartsRepository.CountAsync();
+
+        [HttpPut("{id}/UpdateQuantity")]
+        public async Task<IActionResult> UpdateQuantity(int id, int quantityDelta)
+        {
+            try
+            {
+                await _sparePartsRepository.UpdateQuantityAsync(id, quantityDelta);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }

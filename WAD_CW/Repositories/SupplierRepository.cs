@@ -12,6 +12,10 @@ namespace SPI.Repositories
             _dbContext = dbContext;
         }
 
+        public async Task<int> CountAsync()
+        {
+            return await _dbContext.Set<Category>().CountAsync();
+        }
 
         // Retrieve all entity from the database
         public async Task<IEnumerable<Supplier>> GetAllAsync() => await _dbContext.Suppliers.ToArrayAsync();
@@ -44,7 +48,9 @@ namespace SPI.Repositories
             await _dbContext.SaveChangesAsync();
         }
 
-
+        public async Task UpdateQuantityAsync(int id, int quantityDelta)
+        {
+        }
 
     }
 }

@@ -44,7 +44,6 @@ namespace SPI.Models
         public string? Website { get; set; }
         public DateTime LastContactDate { get; set; }
         public bool IsActive { get; set; }
-        public ICollection<SparePart>? SpareParts { get; set; } = new List<SparePart>();
 
     }
 }
