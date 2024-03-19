@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EKh4M4RGTja9XaDksDeQk8QV070uBJaSWIOuVhTNFQCWYcQsoik30Z4uzdTDYR1hm6JQ006xVqGdagsUCYaFgw==",
+  "dgSpecHash": "3si4NIv7A8WBnl7xf6fjqYSa6oVWSfSq9H+5+V4sMLmEvF+t3j7qt3wG8ZRohGidDBfLUtD5Gb6niH8YETYByw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kushshaev.b\\Desktop\\00013470\\WAD_CW\\SPI.csproj",
+  "projectFilePath": "D:\\WAD\\SharpWiut\\WAD_13470\\WAD_CW\\SPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kushshaev.b\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\kushshaev.b\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

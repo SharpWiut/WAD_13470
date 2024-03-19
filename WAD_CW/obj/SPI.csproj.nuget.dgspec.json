@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kushshaev.b\\Desktop\\00013470\\WAD_CW\\SPI.csproj": {}
+    "D:\\WAD\\SharpWiut\\WAD_13470\\WAD_CW\\SPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kushshaev.b\\Desktop\\00013470\\WAD_CW\\SPI.csproj": {
+    "D:\\WAD\\SharpWiut\\WAD_13470\\WAD_CW\\SPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kushshaev.b\\Desktop\\00013470\\WAD_CW\\SPI.csproj",
+        "projectUniqueName": "D:\\WAD\\SharpWiut\\WAD_13470\\WAD_CW\\SPI.csproj",
         "projectName": "SPI",
-        "projectPath": "C:\\Users\\kushshaev.b\\Desktop\\00013470\\WAD_CW\\SPI.csproj",
+        "projectPath": "D:\\WAD\\SharpWiut\\WAD_13470\\WAD_CW\\SPI.csproj",
         "packagesPath": "C:\\Users\\kushshaev.b\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kushshaev.b\\Desktop\\00013470\\WAD_CW\\obj\\",
+        "outputPath": "D:\\WAD\\SharpWiut\\WAD_13470\\WAD_CW\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
