@@ -35,4 +35,4 @@ To install the necessary dependencies, follow these steps:
 
 **1. Clone Repository:** Clone the project repository to your local machine:
 
-`git clone [https://github.com/your-username/your-project.git](https://github.com/SharpWiut/WAD_Backend_13470)https://github.com/SharpWiut/WAD_Backend_13470`
+`git clone (https://github.com/SharpWiut/WAD_Backend_13470)https://github.com/SharpWiut/WAD_Backend_13470`
