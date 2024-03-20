@@ -18,8 +18,8 @@ namespace SPI.Repositories
             return await _dbContext.Set<SparePart>().CountAsync();
         }
 
-        public async Task<IEnumerable<SparePart>> GetAllAsync() => await _dbContext.SpareParts.ToArrayAsync();
-        
+        public async Task<IEnumerable<SparePart>> GetAllAsync() => await _dbContext.SpareParts.Include(t => t.Category).Include(t => t.Supplier).ToArrayAsync(); //.
+
         public async Task<SparePart> GetByIDAsync(int id)
         {
             return await _dbContext.SpareParts.Include(t =>t.Category).Include(t=>t.Supplier).FirstOrDefaultAsync(t=>t.Id==id);
