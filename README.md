@@ -45,4 +45,4 @@ To install the necessary dependencies, follow these steps:
 
 `Update-Database`
 
-4. Run application: Click play button to runn the back end application.
+**4. Run application:** Click play button to runn the back end application.
