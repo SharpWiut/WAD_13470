@@ -16,10 +16,12 @@ namespace SPI.Controllers
             _sparePartsRepository = sparePartsRepository;
         }
 
+        // GET: api/<SparePartController>
         [HttpGet]
         public async Task<IEnumerable<SparePart>> GetAll() => await _sparePartsRepository.GetAllAsync();
 
 
+        // GET api/<SparePartController>
         [HttpGet("{id}")]
         [ProducesResponseType(typeof(SparePart), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -29,6 +31,8 @@ namespace SPI.Controllers
             return result == null ? NotFound() : Ok(result);
         }
 
+        // POST api/<SparePartController>
+
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         public async Task<IActionResult> Create(SparePart items)
@@ -37,6 +41,7 @@ namespace SPI.Controllers
             return Ok(items);
         }
 
+        // PUT api/<SparePartController>/
 
         [HttpPut]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
@@ -47,7 +52,7 @@ namespace SPI.Controllers
             return NoContent();
         }
 
-
+        // DELETE api/<SparePartController>/
         [HttpDelete("{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -59,9 +64,13 @@ namespace SPI.Controllers
 
         }
 
+        // Count api/<SparePartController>
 
         [HttpGet]
         public async Task<int> Count() => await _sparePartsRepository.CountAsync();
+
+
+        // UpdateQuantity api/<SparePartController>
 
         [HttpPut("{id}/UpdateQuantity")]
         public async Task<IActionResult> UpdateQuantity(int id, int quantityDelta)

@@ -23,7 +23,7 @@ namespace SPI.Controllers
         }
 
 
-        // GET api/<CategoryController>/5
+        // GET api/<CategoryController>
         [HttpGet("{id}")]
         public async Task<IActionResult> GetByID(int id)
         {
@@ -48,7 +48,7 @@ namespace SPI.Controllers
         }
 
 
-        // PUT api/<CategoryController>/5
+        // PUT api/<CategoryController>/
         [HttpPut]
         public async Task<IActionResult> Update(Category categories)
         {
@@ -59,7 +59,7 @@ namespace SPI.Controllers
 
 
 
-        // DELETE api/<CategoryController>/5
+        // DELETE api/<CategoryController>/
         [HttpDelete("{id}")]
 
         public async Task<IActionResult> Delete(int id)

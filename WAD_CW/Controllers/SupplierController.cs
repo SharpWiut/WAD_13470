@@ -24,7 +24,7 @@ namespace SPI.Controllers
         }
 
 
-        // GET api/<CategoryController>/5
+        // GET api/<SupplierController>/
         [HttpGet("{id}")]
         public async Task<IActionResult> GetByID(int id)
         {
@@ -40,7 +40,7 @@ namespace SPI.Controllers
         }
 
 
-        // POST api/<CategoryController>
+        // POST api/<SupplierController>
         [HttpPost]
         public async Task<IActionResult> Create(Supplier suppliers)
         {
@@ -49,7 +49,7 @@ namespace SPI.Controllers
         }
 
 
-        // PUT api/<CategoryController>/5
+        // PUT api/<SupplierController>/
         [HttpPut]
         public async Task<IActionResult> Update(Supplier suppliers)
         {
@@ -60,7 +60,7 @@ namespace SPI.Controllers
 
 
 
-        // DELETE api/<CategoryController>/5
+        // DELETE api/<SupplierController>/
         [HttpDelete("{id}")]
 
         public async Task<IActionResult> Delete(int id)
