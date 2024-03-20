@@ -35,4 +35,14 @@ To install the necessary dependencies, follow these steps:
 
 **1. Clone Repository:** Clone the project repository to your local machine:
 
-`git clone (https://github.com/SharpWiut/WAD_Backend_13470)https://github.com/SharpWiut/WAD_Backend_13470`
+`git clone https://github.com/SharpWiut/WAD_Backend_13470`
+
+**2. Install Backend Dependencies:** Restore NuGet packages and install backend dependencies:
+
+`dotnet restore`
+
+**3. Update database:** To create database run following command on package manager console:
+
+`Update-Database`
+
+4. Run application: Click play button to runn the back end application.
