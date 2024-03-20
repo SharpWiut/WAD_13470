@@ -27,7 +27,7 @@ Before you begin, ensure you have met the following requirements:
 
 To install the necessary dependencies, follow these steps:
 
-**1. .NET Core SDK:** Download and install the .NET Core SDK from the official website: [https://dotnet.microsoft.com/en-us/download]Microsoft .NET
+**1. .NET Core SDK:** Download and install the .NET Core SDK from the official website: [https://dotnet.microsoft.com/en-us/download](Microsoft .NET)
 
 **2. Database:** Install the preferred database server and client tools (if necessary).
 
